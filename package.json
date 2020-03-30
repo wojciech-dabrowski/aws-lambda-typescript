@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "name": "covid-19-data-synchronizer",
+  "scripts": {
+    "build": "webpack-cli",
+    "clean": "rimraf .aws-sam .vscode",
+    "prebuild": "npm run clean",
+    "prewatch": "npm run clean",
+    "watch": "webpack-cli -w",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.647.0",
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.46",
+    "@types/node": "^13.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "aws-sam-webpack-plugin": "^0.6.0",
+    "eslint": "^6.8.0",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}

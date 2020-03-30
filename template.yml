@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: Example template for lambda function
+Resources:
+  MyFunctionName:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/function-name
+      Handler: app.handler
+      Runtime: nodejs12.x
+      Timeout: 180
+      MemorySize: 128
+      Environment:
+        Variables:
+          SOME_ENV_VAR: VALUE
