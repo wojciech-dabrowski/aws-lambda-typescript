@@ -2,17 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "MyFunctionName",
+      "name": "CalculateStudentGrade",
       "type": "node",
       "request": "attach",
       "address": "localhost",
       "port": 5858,
-      "localRoot": "${workspaceRoot}/.aws-sam/build/MyFunctionName",
+      "localRoot": "${workspaceRoot}/.aws-sam/build/CalculateStudentGrade",
       "remoteRoot": "/var/task",
       "protocol": "inspector",
       "stopOnEntry": false,
       "outFiles": [
-        "${workspaceRoot}/.aws-sam/build/MyFunctionName/app.js"
+        "${workspaceRoot}/.aws-sam/build/CalculateStudentGrade/app.js"
       ],
       "sourceMaps": true
     }

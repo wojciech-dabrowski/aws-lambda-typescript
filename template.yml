@@ -2,10 +2,10 @@ AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 Description: Example template for lambda function
 Resources:
-  MyFunctionName:
+  CalculateStudentGrade:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/function-name
+      CodeUri: src/calculate-student-grade
       Handler: app.handler
       Runtime: nodejs12.x
       Timeout: 180
