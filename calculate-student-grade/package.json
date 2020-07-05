@@ -2,7 +2,8 @@
   "version": "1.0.0",
   "name": "covid-19-data-synchronizer",
   "scripts": {
-    "build": "tsc && copy package.json dist\\package.json && (cd dist && npm install --production)"
+    "rebuild": "tsc && copy package.json dist\\package.json && (cd dist && npm install --production)",
+    "watch": "tsc --watch"
   },
   "devDependencies": {
     "@types/node": "^13.13.5",

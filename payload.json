@@ -1,5 +1,5 @@
 {
-    "LectureGrade": 3,
-    "ExerciseGrade": 4,
-    "WorkshopGrade": 4.5
+    "lectureGrade": 3,
+    "exerciseGrade": 4,
+    "workshopGrade": 4.5
 }
