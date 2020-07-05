@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "covid-19-data-synchronizer",
+  "scripts": {
+    "build": "tsc && copy package.json dist\\package.json && (cd dist && npm install --production)"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "eslint": "^7.4.0",
+    "typescript": "^3.9.6"
+  }
+}

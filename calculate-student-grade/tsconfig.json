@@ -2,12 +2,12 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",
-    "allowJs": true,
-    "checkJs": true,
     "sourceMap": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "strict": true,
+    "outDir": "./dist",
     "esModuleInterop": true
   },
-  "include": ["src/**/*.ts", "src/**/*.js"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }

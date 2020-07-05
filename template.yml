@@ -5,7 +5,7 @@ Resources:
   CalculateStudentGrade:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/calculate-student-grade
+      CodeUri: calculate-student-grade/dist
       Handler: app.handler
       Runtime: nodejs12.x
       Timeout: 180
