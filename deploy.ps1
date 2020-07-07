@@ -1,10 +1,9 @@
-npm run build
+npm run rebuild
 sam deploy `
-    --template-file template.yaml `
-    --stack-name my-stack-name `
-    --s3-bucket my-serverless-deploy-bucket `
+    --template-file template.yml `
+    --stack-name aws-lambda-nodejs `
+    --s3-bucket serverless-source-code-bucket `
     --s3-prefix my-stack-prefix/ `
     --region eu-west-1 `
-    --profile private `
     --capabilities CAPABILITY_IAM `
     --no-fail-on-empty-changeset
