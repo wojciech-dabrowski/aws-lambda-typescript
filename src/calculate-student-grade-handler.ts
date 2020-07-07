@@ -1,19 +1,8 @@
 import { CalculateStudentGradeRequest } from "./models/calculate-student-grade-request";
 import { CalculateStudentGradeResponse } from "./models/calculate-student-grade-response";
 
-export const calculateStudentGradeHandler = async (
-  request: CalculateStudentGradeRequest
-): Promise<CalculateStudentGradeResponse> => {
-  const finalGrade = calculateFinalGrade(
-    request.lectureGrade,
-    request.exerciseGrade,
-    request.workshopGrade
-  );
-
-  return {
-    finalGrade: finalGrade,
-    hasPassed: finalGrade >= 3,
-  };
+const roundToNearestHalf = (value: number): number => {
+  return Math.round(value * 2) / 2;
 };
 
 const calculateFinalGrade = (
@@ -33,6 +22,17 @@ const calculateFinalGrade = (
   return roundToNearestHalf(rawFinalGrade);
 };
 
-const roundToNearestHalf = (value: number): number => {
-  return Math.round(value * 2) / 2;
+export const calculateStudentGradeHandler = async (
+  request: CalculateStudentGradeRequest
+): Promise<CalculateStudentGradeResponse> => {
+  const finalGrade = calculateFinalGrade(
+    request.lectureGrade,
+    request.exerciseGrade,
+    request.workshopGrade
+  );
+
+  return {
+    finalGrade: finalGrade,
+    hasPassed: finalGrade >= 3,
+  };
 };
