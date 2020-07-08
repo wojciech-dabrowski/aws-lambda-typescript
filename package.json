@@ -1,15 +1,12 @@
 {
   "version": "1.0.0",
-  "name": "covid-19-data-synchronizer",
+  "name": "calculate-student-grade",
   "scripts": {
-    "rebuild": "tsc && copy package.json dist\\package.json && (cd dist && npm install --production)",
+    "rebuild": "(if exist dist rmdir /Q /S dist) && tsc && copy package.json dist\\package.json && (cd dist && yarn install --production)",
     "watch": "tsc --watch"
   },
   "devDependencies": {
     "@types/node": "^13.13.5",
-    "@typescript-eslint/eslint-plugin": "^3.5.0",
-    "@typescript-eslint/parser": "^3.5.0",
-    "eslint": "^7.4.0",
     "typescript": "^3.9.6"
   }
 }

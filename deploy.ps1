@@ -1,4 +1,4 @@
-npm run rebuild
+yarn run rebuild
 sam deploy `
     --template-file template.yml `
     --stack-name aws-lambda-nodejs `

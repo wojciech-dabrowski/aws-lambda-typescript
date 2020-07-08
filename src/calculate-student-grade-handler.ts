@@ -22,9 +22,9 @@ const calculateFinalGrade = (
   return roundToNearestHalf(rawFinalGrade);
 };
 
-export const calculateStudentGradeHandler = async (
+export const calculateStudentGradeHandler = (
   request: CalculateStudentGradeRequest
-): Promise<CalculateStudentGradeResponse> => {
+): CalculateStudentGradeResponse => {
   const finalGrade = calculateFinalGrade(
     request.lectureGrade,
     request.exerciseGrade,
